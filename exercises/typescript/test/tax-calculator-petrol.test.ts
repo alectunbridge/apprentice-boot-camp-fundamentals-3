@@ -2,7 +2,6 @@ import { DummyTaxCalculator } from './dummy-tax-calculator';
 import { Vehicle } from '../vehicle';
 import { FuelType } from '../fuel-type';
 
-describe.skip('Tax calculator on a petrol vehicle for the first year', () => {
   let taxCalculator = new DummyTaxCalculator();
   let FIRST_OF_JAN_2020 = new Date(2020, 1, 1);
 
@@ -70,4 +69,3 @@ describe.skip('Tax calculator on a petrol vehicle for the first year', () => {
     const vehicle = new Vehicle(256, FuelType.PETROL, FIRST_OF_JAN_2020, 20000);
     expect(taxCalculator.calculateTax(vehicle)).toBe(2070);
   })
-})
